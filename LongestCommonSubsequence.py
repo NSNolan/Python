@@ -8,7 +8,7 @@ class LongestCommonSubsequence(object):
 
     def solve(self):
         longest = 0
-        matrix = [[0 for x in range(len(self.string1) + 1)] for y in range(len(self.string2) + 1)]
+        matrix = [[0 for x in range(len(self.string2) + 1)] for y in range(len(self.string1) + 1)]
             
         for x in range(1, len(matrix)):
             for y in range(1, len(matrix[x])):
