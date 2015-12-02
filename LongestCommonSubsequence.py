@@ -7,7 +7,6 @@ class LongestCommonSubsequence(object):
         self.string2 = string2
 
     def solve(self):
-        longest = 0
         matrix = [[0 for x in range(len(self.string2) + 1)] for y in range(len(self.string1) + 1)]
             
         for x in range(1, len(matrix)):
@@ -17,9 +16,6 @@ class LongestCommonSubsequence(object):
                     matrix[x][y] = matrix[x - 1][y - 1] + 1
                 else:
                     matrix[x][y] = max(matrix[x - 1][y], matrix[x][y - 1])
-
-                if matrix[x][y] > longest:
-                    longest = matrix[x][y]
 
         return matrix
 
